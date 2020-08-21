@@ -27,8 +27,9 @@ body{
 /* Responsive Navigation Bar*/
 
 header{
-    position: static;
+    position: fixed;
     width: fit-content;
+    z-index: 1;
 }
 
 #navigation{
@@ -217,5 +218,228 @@ header{
     height: 100vh;
 }
 
+#main-container{
+    position: relative;
+    top: 110px;
+}
+
+#hamburger-content{
+    display: none;
+}
 
 
+/* make navigation bar responsive */
+
+#hamburger-menu{
+    display: none;
+}
+
+
+
+@media (max-width : 786px){
+    
+    #top-script{
+        font-size: 10px;
+    }
+    
+
+    #main-container{
+        top: 135px;
+    }
+
+    .icon img{
+        width: 100px;
+    }
+
+    #navigation .left-item, #navigation .create-card{
+        display: none;
+    }
+
+    #hamburger-menu{
+        display: block;
+        width: 70px;
+        height: 100%;
+        order: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .dash{
+        background-color: #404040;
+        height: 3px;
+        width: 40%;
+        border-radius: 15%;
+        margin-bottom: 10%;
+    }
+
+    #hamburger-menu .dash:first-child{
+        margin-top: calc(50% - 15px);
+    }
+
+    #flag{
+        order: -1;
+        border: 0.5px solid rgba(167, 163, 163, 0.548) !important;
+    }
+
+    #flag-after{
+        display: none;
+    }
+
+    #flags-drop-down{
+        width: 71.2px;
+        align-items: center;
+    }
+
+    #flags-drop-down div:nth-child(n) {
+        padding: 20px 25px;
+    }
+
+    #hamburger-content{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        position: fixed;
+        top: 135px;
+        width: 100vw;
+        height: calc(100vw - 135px);
+        background-color: #FFFFFF;
+    }
+
+    #hamburger-content li, #hamburger-content a{
+        color: #6a7594 !important;
+        font-weight: bolder;
+        letter-spacing: -0.5px;
+    }
+
+    #hamburger-content li{
+        font-size: 12px;
+        width: 100%;
+        height: 70px;
+        border-bottom: 0.5px solid rgba(167, 163, 163, 0.548) !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    #hamburger-content li:first-child{
+        margin: 0;
+    }
+
+    /* add animations to hamburger icon */
+    .dash:nth-child(1){
+        /*animation-name: dash-top; */
+        animation-fill-mode: forwards;
+        animation-duration: 0.4s;
+    }
+
+    .dash:nth-child(2){
+        /*animation-name: dash-middle; */
+        animation-fill-mode: forwards;
+        animation-duration: 0.4s;
+    }
+
+    .dash:nth-child(3){
+        /*animation-name: dash-bottom;*/
+        animation-fill-mode: forwards;
+        animation-duration: 0.4s;
+    }
+
+
+    /* add animation to hamburger menu container */
+
+    #hamburger-content{
+        left: 100%;
+        transition: none;
+        /*animation-name: slide-in; */
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+    }
+
+    #main-container{
+        transition: left 0.5s;
+        left: 0;
+    }
+
+    body{
+        transition: background-color 0.5s;
+    }
+
+}
+
+
+
+    /* hamburger menu animations */
+    @keyframes dash-top-in{
+        to{
+            transform: rotateZ(45deg);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes dash-bottom-in{
+        to{
+            transform: rotateZ(-45deg);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes dash-middle-in{
+        to{
+            position: relative;
+            left: -10px;
+            opacity: 0;
+        }
+    }
+
+
+    @keyframes dash-top-out{
+        from{
+            transform: rotateZ(45deg);
+            transform-origin: left;
+        }
+        to{
+            transform: rotateZ(0deg);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes dash-bottom-out{
+        from{
+            transform: rotateZ(-45deg);
+            transform-origin: left;
+        }
+        to{
+            transform: rotateZ(0deg);
+            transform-origin: left;
+        }
+    }
+
+    @keyframes dash-middle-out{
+        from{
+            left: -10px;
+            opacity: 0;
+        }
+        to{
+            position: relative;
+            left: 0px;
+            opacity: 1;
+        }
+    }
+
+    /* hamburger menu content animation */
+
+    @keyframes slide-in{
+        to{
+            left: 0;
+        }
+    }
+
+    @keyframes slide-out{
+        from{
+            left: 0;
+        }
+        to{
+            left: 100%;
+        }
+    }

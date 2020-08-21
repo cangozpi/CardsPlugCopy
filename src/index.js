@@ -127,4 +127,62 @@ flagFunctionalities();
 
 
 
-//
+// responsive hamburger menu animations
+let hamburgerMenuIcon = () => {
+
+    //hamburger-menu icon animations and click functionality
+    let hamburgerIconAnimation = () => {
+    let dashTop = document.querySelectorAll('.dash')[0];
+    let dashMiddle = document.querySelectorAll('.dash')[1];
+    let dashBottom = document.querySelectorAll('.dash')[2];
+    let hamburgerIcon = document.querySelector('#hamburger-menu');
+
+    let isMenuOpen = false;
+
+    hamburgerIcon.addEventListener('click', () => {
+        if(!isMenuOpen){// menu will be opened
+            dashTop.style.animationName = "dash-top-in"
+            dashBottom.style.animationName = "dash-bottom-in"
+            dashMiddle.style.animationName = "dash-middle-in"
+        }else{//menu will be closed
+            dashTop.style.animationName = "dash-top-out"
+            dashBottom.style.animationName = "dash-bottom-out"
+            dashMiddle.style.animationName = "dash-middle-out"
+        }
+        isMenuOpen = !isMenuOpen;
+    })
+
+    }
+
+    hamburgerIconAnimation();
+
+
+
+}
+
+hamburgerMenuIcon();
+
+//responsive hamburger menu contents animation
+let hamburgerMenuContents = () => {
+    let hamburgerIcon = document.querySelector('#hamburger-menu');
+    let hamburgerContents = document.querySelector('#hamburger-content');
+    let body = document.querySelector('body');
+    let mainContentElement = document.querySelector('#main-container');
+
+    let isMenuOpen = false;
+
+    hamburgerIcon.addEventListener('click', () => {
+        if(!isMenuOpen){// open the menu
+            body.style.backgroundColor = "#B2B2B2";
+            mainContentElement.style.left = "-100vw"
+            hamburgerContents.style.animationName = "slide-in"
+        }else{//hide the menu
+            body.style.backgroundColor = "transparent";
+            mainContentElement.style.left = "0";
+            hamburgerContents.style.animationName = "slide-out";
+        } 
+        isMenuOpen = !isMenuOpen
+    })
+}
+
+hamburgerMenuContents();
