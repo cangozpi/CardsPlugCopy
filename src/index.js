@@ -174,11 +174,15 @@ let hamburgerMenuContents = () => {
     hamburgerIcon.addEventListener('click', () => {
         if(!isMenuOpen){// open the menu
             body.style.backgroundColor = "#B2B2B2";
-            mainContentElement.style.left = "-100vw"
+            //mainContentElement.style.left = "-100vw"
+            
+            mainContentElement.style.position = "fixed"
             hamburgerContents.style.animationName = "slide-in"
         }else{//hide the menu
             body.style.backgroundColor = "transparent";
-            mainContentElement.style.left = "0";
+            //mainContentElement.style.left = "0";
+            
+            mainContentElement.style.position = "relative"
             hamburgerContents.style.animationName = "slide-out";
         } 
         isMenuOpen = !isMenuOpen
