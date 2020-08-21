@@ -97,3 +97,81 @@ a{
     font-size: 12px;
     font-weight: bolder;
 }
+
+.create-card:hover{
+    background-color: #15234C;
+    color: #F9B735;
+}
+
+.fa-user, .fa-shopping-cart{
+    font-size: 17px;
+}
+
+#flag img, .flags-drop-menu img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#flag-after{
+    content:  '';
+    display: block;
+    width: 6.5px;
+    height: 6.5px;
+    border: 1.3px solid black;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotateZ(45deg);
+    margin-left: 13px;
+}
+
+#nav-list li:hover{
+    cursor: pointer;
+}
+
+.icon img:hover{
+    cursor: pointer;
+}
+
+.icon{
+    cursor: default !important;
+}
+
+.left-item:hover{
+    text-decoration: underline;
+}
+
+
+
+/* flag drop down */
+
+#flag{
+    position: relative;
+}
+
+#flags-drop-down{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #FFFFFF;
+    left: 0;
+    justify-content: center;
+    left: -0.5px;
+}
+
+#flags-drop-down div:nth-child(n){
+    padding: 34.6px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    border: 0.5px solid rgba(167, 163, 163, 0.548);
+}
+
+#flags-drop-down div:nth-child(n):hover{
+    background-color: #F8F9FA;
+}
+
+
+
+
+
+
