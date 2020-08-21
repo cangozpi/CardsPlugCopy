@@ -6,10 +6,12 @@
 }
 
 
+body{
+    overflow-x: visible;
+}
 
 /* Changing Header Script*/
 #top-script{
-    width: 100vw;
     height: 40px;
     background-color: #15234C;
     display: flex;
@@ -24,9 +26,15 @@
 
 /* Responsive Navigation Bar*/
 
+header{
+    position: static;
+    width: fit-content;
+}
+
 #navigation{
     height: 70px;
-    width: 100vw;
+    width: fit-content;
+    min-height: min-content;
     background-color: #FFFFFF;
     border: 1px solid black;
 }
@@ -36,6 +44,8 @@
     align-items: center;
     list-style: none;
     height: 100%;
+    width: 100vw;
+    min-width: fit-content;
 }
 
 #nav-list li{
@@ -172,6 +182,40 @@ a{
 
 
 
+
+/* animate hader as fade in on page load */
+header{
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* fade in animation ends here */
+
+
+
+
+/* handle the contents of the page */
+
+#first-content{
+    background-image: url(//cdn.shopify.com/s/files/1/2412/8291/files/home-top-banner-bg_83b39adc-d83d-448a-abfc-d1c2809541e7.jpg?v=1582201084);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-position: top  center;
+    width: 100vw;
+    height: 100vh;
+}
 
 
 
