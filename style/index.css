@@ -918,4 +918,91 @@ body{
     margin-right: 20px;
 }
 
-/* */
+
+
+
+/* second-content responsive media queries below */
+
+@media (max-width: 788px){
+
+    
+    #second-content{
+        grid-template-rows: 40vh repeat(2, 1fr);
+    }
+
+
+    #second-content h3{
+        font-size: 30px;
+    }
+    
+    #second-content h4{
+       margin-top: 30px;
+       font-size: 13px;
+    }
+    
+    #second-content .long-text{
+       display: none;
+    }
+
+    #second-content .short-text{
+        display: block !important;
+        
+    }
+
+    #second-content p{
+        width: 95%;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    
+
+    #second-content .value{
+        font-size: 40px;
+    }
+
+    #second-content .param{
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    #background-site-name{
+        font-size: 98px;
+        position: relative;
+        top: 53px;
+    }
+
+
+    /* icons responsive */
+    #icon-one, #icon-two, #icon-three , #icon-four {
+        font-weight: bolder;
+        letter-spacing: -0.7px;
+        font-size: 10px;
+    }
+    
+    #second-content .circled-icon{
+        width: 50px;
+        height: 50px;
+        margin-right: 8px;
+    }
+
+    #second-content .circled-icon:first-child{
+        margin-left: 10px;
+    }
+
+    #second-content img{
+        width: 20px;
+        height: 20px;
+    }
+
+    #second-content br{
+        display: none;
+    }
+    
+
+
+}
+
+
+/* second-content responsive ends here*/
+
