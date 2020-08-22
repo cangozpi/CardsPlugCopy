@@ -29,7 +29,7 @@ body{
 header{
     position: fixed;
     width: fit-content;
-    z-index: 1;
+    z-index: 9;
 }
 
 #navigation{
@@ -456,7 +456,7 @@ body{
 }
 
 #first-content h1{
-    font-size: 80px;
+    font-size: 6vw;
     margin-bottom: 28px;
     letter-spacing: -1px;
     color: #fff;
@@ -464,14 +464,14 @@ body{
 
 #first-content h3{
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 1.8vw;
 }
 
 #first-content button{
     background-color: #F9B735;
     height: 80px;
     width: 290px;
-    border: 0.5px solid black;
+    border: none;
     font-size: 17px;
     letter-spacing: -0.5px;
     cursor: pointer;
@@ -630,3 +630,132 @@ body{
     left: -25px;
     position: relative;
 }
+
+
+
+
+
+/* make first content and setup summary RESPONSIVE */
+
+@media (max-width: 786px){
+
+    #first-content button{
+        height: 60px;
+        width: 240px;
+        border: none;
+        font-size: 14px;
+        letter-spacing: -0.5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    #first-content {
+        background-size: 150% 100%;
+    }
+
+    #first-content::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient( rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.692));
+    }
+
+    #first-content .text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        z-index: 2;
+    }
+
+    br{
+        content:' ';
+    }
+    
+    br:after{
+        content:' ';
+    }
+
+
+
+    #steps-summary{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+    }
+
+    #steps-summary > div{
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #steps-summary >div:nth-child(1), #steps-summary >div:nth-child(3){
+        border-bottom: 1px solid #444F70;
+        border-right: 1px solid #444F70;
+    }
+
+    #steps-summary >div:nth-child(2), #steps-summary >div:nth-child(4)
+        , #steps-summary >div:nth-child(5){
+        border-bottom: 1px solid #444F70;
+    }
+
+
+    #step-one{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    #step-two{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        margin-left: 0;
+        padding-top: 10px;
+    }
+
+    #step-three{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-left: 0;
+    }
+
+    #step-four{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin-left: 0;
+    }
+
+    #step-five{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    #step-one::after, #step-two::after, #step-three::after
+    , #step-four::after, #step-five::after {
+        content: none;
+    }
+
+}
+
+
+/* responsive section ends here */
+
+
+
