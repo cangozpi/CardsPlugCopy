@@ -193,3 +193,58 @@ let hamburgerMenuContents = () => {
 }
 
 hamburgerMenuContents();
+
+
+
+//second-content count up animation
+let countAnimation = (duration) => {
+    let numbers = document.querySelectorAll('#second-content .value');
+    let isFired = new Array; //array to check if animation already fired
+
+    for(let i = 0 ; i < numbers.length ; i++){
+        isFired.push(false);
+    }
+
+    //callback function to fire animation
+    let countUp = (currentElement, elementValue) => {
+        let count = 0;
+        let interval = setInterval(() => {
+            count = count + (elementValue / duration);
+            currentElement.innerHTML = Number.parseFloat(count).toPrecision(6);
+
+            //make sure to end animation when number s high enough
+            if(elementValue <= count){
+                currentElement.innerHTML = elementValue;
+                clearInterval(interval);
+            }
+
+        }, 1);
+
+    }
+
+    //check scroll to fire animation
+    window.onscroll = () => {
+        let currentPageBottom = window.pageYOffset+ window.innerHeight;
+        
+        for(let j = 0 ; j < numbers.length ; j++){
+            const currentElement = numbers[j];
+            const elementValue = parseFloat(currentElement.innerHTML);
+                
+            //added 120 because of the fixed header's height
+            if(currentElement.offsetTop  + 120 <= currentPageBottom){
+
+                //make sure the animation fires only once
+                if(!isFired[j]){
+                    countUp(currentElement, elementValue);
+                    isFired[j] = true;
+
+                }
+            }
+        }
+
+    }
+
+}
+
+const duration = 700;//duration of the count up animation in ms
+countAnimation(duration);
