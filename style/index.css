@@ -449,4 +449,184 @@ header{
 
 
 
-/*  */
+/* first content */
+
+body{
+    overflow-x: hidden;
+}
+
+#first-content h1{
+    font-size: 80px;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+#first-content h3{
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+#first-content button{
+    background-color: #F9B735;
+    height: 80px;
+    width: 290px;
+    border: 0.5px solid black;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    outline: none;
+}
+
+#first-content .text{
+    position: absolute;
+    top: 180px;
+    margin-left: 50px;
+}
+
+#first-content button:hover{
+    background-color: #16244D;
+    color: #F9B735;
+}
+
+
+
+
+
+/* Steps Wizard */
+
+#steps-summary{
+    width: 100vw;
+    height: 80px;
+    background-color: #15234C;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    min-height: fit-content;
+}
+
+#step-one{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#step-two{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: -75px;
+}
+
+#step-three{
+    flex-grow: 1;  
+    display: flex;  
+    height: 100%;
+    align-items: center;
+    margin-left: -75px;
+}
+
+#step-four{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: -75px;
+}
+
+#step-five{
+    flex-grow: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: -75px;
+}
+
+.circle{
+    border: 2px solid #FFFFFF;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 50px;
+}
+
+.number{
+    color: black;
+    width: 15px;
+    height: 15px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 720;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-text{
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 750;
+    width: fit-content;
+    margin-left: 30px;
+    height: fit-content;
+}
+
+#step-one::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 0.1px solid #444F70;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    left: -25px;
+    position: relative;
+}
+
+#step-two::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 0.1px solid #444F70;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    left: -25px;
+    position: relative;
+}
+
+#step-three::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 0.1px solid #444F70;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    left: -25px;
+    position: relative;
+}
+
+#step-four::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: 0.1px solid #444F70;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    left: -25px;
+    position: relative;
+}

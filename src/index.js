@@ -38,6 +38,9 @@ let createCardButton = document.querySelector('.create-card');
 
 window.onload = () => {
     createCardButton.style.transition = "color, background-color ease-in-out 0.2s";
+
+    let buttonElement = document.querySelector("#first-content button");
+    buttonElement.style.transition = "background-color 0.15s ease-in-out";
 }
 
 
