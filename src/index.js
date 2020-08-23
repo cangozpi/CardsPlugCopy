@@ -252,4 +252,52 @@ countAnimation(duration);
 
 
 
+//third-content hover functionality
+let thirdContentHover = () =>{
+    let hoverElements = document.querySelectorAll('.svg-container svg');
+
+    //for each hover element
+    for(let i = 0 ; i < hoverElements.length ; i++){
+        let element = hoverElements[i];
+        let hoverText = element.parentElement.children[0];
+        
+        let clicked = false;
+
+        //handle hover
+        element.addEventListener('mouseover', (event) =>{
+            event.stopPropagation();
+            hoverText.style.display = "block";
+        })
+
+        //handle click and phone
+        element.addEventListener('focus', (event) =>{
+            event.stopPropagation();
+            hoverText.style.display = "block";
+            clicked = true;
+        })
+
+        //handle click and phone
+        element.addEventListener('blur', (event) =>{
+            event.stopPropagation();
+            
+            hoverText.style.display = "none";
+
+            clicked = false;
+        })
+
+        element.addEventListener('mouseout', (event) =>{
+            event.stopPropagation();
+            if(!clicked){
+            hoverText.style.display = "none";
+            }
+        })
+    }
+
+}
+
+thirdContentHover();
+
+
+
+
 //

@@ -1110,6 +1110,9 @@ body{
     display: none;
 }
 
+.svg-container .hover-text{
+    display: none;
+}
 
 /* third-content media queries */
 
@@ -1126,7 +1129,7 @@ body{
     #third-content img{
         content: url("img/content-three-responsive-background.png");
         height: 65vh;
-        width: 44vw;
+        width: 277.2px;
     }
 
     #third-content .text{
@@ -1160,7 +1163,7 @@ body{
     .responsive-display{
         display: block;
         position: absolute;   
-        width: 44vw;
+        width: 277.2px;
         height: 40vh; 
         display: flex;
         flex-direction: column;
@@ -1200,11 +1203,25 @@ body{
         fill: #FFFFFF;
     }
 
+    .svg-container:hover{
+        fill: #15234C;
+    }
+
     .responsive-display .row .svg-container{
         background-color: #15234C;
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        position: relative;
+    }
+
+    svg{
+        outline: none;
+    }
+
+    .responsive-display .row .svg-container:hover{
+        background-color: #F9B735;
+        cursor: pointer;
     }
 
     .responsive-display .row .svg-container:nth-child(2){
@@ -1226,6 +1243,79 @@ body{
     .responsive-display .row:nth-child(4){
         margin-left: 0px;
     }
+
+
+    .svg-container .hover-text{
+        background-color: #F9B735;
+        border: 0.5px solid #da9c20;
+        min-width: fit-content;
+        min-height: fit-content;
+        padding: 5px;
+        font-size: 9px;
+        font-weight: bolder;
+        position: absolute;
+        top: -30px;
+        left: -50%;
+        flex-wrap: nowrap;
+        opacity: 0.9;
+        line-height: 13px;
+        white-space: nowrap;
+        text-align: center;
+        display: block;
+    }
+
+    .svg-container .hover-text::after{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #F9B735;
+        border: 2px solid #F9B735;
+        margin-left: calc(50% - 10px);
+        bottom: -2.8px;
+        position: absolute;
+        opacity: 0.9;
+        transform: rotateZ(45deg);
+        border-left-color: transparent;
+        border-top-color: transparent;
+        z-index: -1;
+    }
+
+    .row-1 .hover-text{
+        margin-left: -47px;
+    }
+
+    
+    .row-2 .svg-container:nth-child(1) .hover-text{
+        margin-left: -20px;
+    }
+    
+    .row-2 .svg-container:nth-child(2) .hover-text{
+        margin-left: -33px;
+        transform: translateY(-15px);
+    }
+
+    
+    .row-3 .svg-container:nth-child(1) .hover-text{
+        margin-left: -20px;
+    }
+    
+    .row-3 .svg-container:nth-child(2) .hover-text{
+        margin-left: -9.5px;
+    }
+    
+    .row-4 .svg-container:nth-child(1) .hover-text{
+        margin-left: 5px;
+    }
+    
+    .row-4 .svg-container:nth-child(2) .hover-text{
+        margin-left: -33px;
+    }
+    
+    .svg-container .hover-text{
+        display: none;
+    }
+
 
 }
 
