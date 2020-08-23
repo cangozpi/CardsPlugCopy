@@ -248,3 +248,8 @@ let countAnimation = (duration) => {
 
 const duration = 700;//duration of the count up animation in ms
 countAnimation(duration);
+
+
+
+
+//

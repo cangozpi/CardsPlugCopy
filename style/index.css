@@ -1003,6 +1003,58 @@ body{
 
 }
 
-
 /* second-content responsive ends here*/
 
+
+
+
+/* affect to first content */
+
+#first-content .text h3{
+    animation-name: fade-in-top-h3;
+    animation-fill-mode: forwards;
+    animation-duration: 1.8s;
+}
+
+#first-content .text h1, #first-content .text button{
+    animation-name: fade-in-top-h1;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+
+@keyframes fade-in-top-h3{
+    from{
+        transform: translateY(80px);
+        opacity: 0;
+    }
+
+    70%{
+        opacity: 0.4;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-top-h1{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    70%{
+        opacity: 0.5;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* animation ends here */
