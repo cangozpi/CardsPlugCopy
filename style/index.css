@@ -453,6 +453,7 @@ header{
 
 body{
     overflow-x: hidden;
+    background-color: #F3F4F6;
 }
 
 #first-content h1{
@@ -1058,3 +1059,48 @@ body{
 }
 
 /* animation ends here */
+
+
+
+
+/* third-content */
+
+#third-content{
+    background-image: url("/style/img/content-three-background.png");
+    background-position-x: right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#third-content img{
+    margin-top: 10vh;
+}
+
+#third-content .text{
+    color: #15234C;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    position: absolute;
+    top: 60px;
+    left: 25px;
+}
+
+
+#third-content h3{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: -2px;
+}
+
+#third-content h2{
+    font-size: 50px;
+    font-weight: bolder;
+    letter-spacing: -2px;
+    margin-left: 5px;
+}

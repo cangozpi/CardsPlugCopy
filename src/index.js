@@ -182,7 +182,7 @@ let hamburgerMenuContents = () => {
             mainContentElement.style.position = "fixed"
             hamburgerContents.style.animationName = "slide-in"
         }else{//hide the menu
-            body.style.backgroundColor = "transparent";
+            body.style.backgroundColor = "#F3F4F6";
             //mainContentElement.style.left = "0";
             
             mainContentElement.style.position = "relative"
