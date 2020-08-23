@@ -1080,6 +1080,7 @@ body{
 
 #third-content img{
     margin-top: 10vh;
+    width: 85vw;
 }
 
 #third-content .text{
@@ -1104,3 +1105,138 @@ body{
     letter-spacing: -2px;
     margin-left: 5px;
 }
+
+.responsive-display{
+    display: none;
+}
+
+
+/* third-content media queries */
+
+@media (max-width: 766px){
+    
+    #third-content{
+        height: 95vh;
+        flex-direction: column;
+        background-position-x: center;
+        background-position-y: top;
+        background-size: 100% 59.5%;
+    }
+
+    #third-content img{
+        content: url("img/content-three-responsive-background.png");
+        height: 65vh;
+        width: 44vw;
+    }
+
+    #third-content .text{
+        position: initial;
+        margin-top: 40px;
+        text-align: center;
+        margin-bottom: -20px;
+    }
+
+
+    #third-content h3{
+        font-size: 15px;
+        letter-spacing: -1px;
+    }
+
+    #third-content h2{
+        font-size: 30px;
+    }
+
+    #third-content h2::after{
+        content: "Click on icon to read benefits";
+        display: block;
+        font-size: 13px;
+        font-weight: lighter;
+        letter-spacing: 0;
+        margin-top: 30px;
+        margin-bottom: -15px;
+    }
+
+
+    .responsive-display{
+        display: block;
+        position: absolute;   
+        width: 44vw;
+        height: 40vh; 
+        display: flex;
+        flex-direction: column;
+        margin-top: 95px;
+        margin-left: -10px;
+    }
+
+    .responsive-display .row{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: calc(45vh / 4);
+    }
+
+    .responsive-display .row svg{
+        height: 100%;
+        width: 100%;
+    }
+
+    .responsive-display .row g {
+        transform: translateX(13px) translateY(12px) scale(0.9);
+    }
+
+    #fix-one{
+        transform: translateX(1.5px) translateY(2px) scale(0.9);
+    }
+
+    #fix-two{
+        transform: translateX(13px) translateY(9px) scale(0.9);
+    }
+
+    #fix-three{
+        transform: translateX(11px) translateY(10px) scale(0.9);
+    }
+
+    .svg-container{
+        fill: #FFFFFF;
+    }
+
+    .responsive-display .row .svg-container{
+        background-color: #15234C;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .responsive-display .row .svg-container:nth-child(2){
+        margin-left: 155px;
+    }
+
+    .responsive-display .row:nth-child(1){
+        margin-left: 35px;
+    }
+    
+    .responsive-display .row:nth-child(2){
+        margin-left: 20px;
+    }
+    
+    .responsive-display .row:nth-child(3){
+        margin-left: 10px;
+    }
+
+    .responsive-display .row:nth-child(4){
+        margin-left: 0px;
+    }
+
+}
+
+
+/* responsive ends here */
+
+
+
+
+/*  */
+
+
+
+
