@@ -1365,6 +1365,7 @@ body{
     flex-basis: 27.5vw;
     flex-grow: 0;
     flex-shrink: 0;
+    z-index: -1;
 }
 
 #fourth-content #card-display .slider-card img{
@@ -1423,6 +1424,13 @@ body{
 
 }
 
+#card-display .left-arrow:hover{
+    cursor: pointer;
+}
+
+#card-display .right-arrow:hover{
+    cursor: pointer;
+}
 
 #card-display .right-arrow::after{
     content: "";

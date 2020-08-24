@@ -300,4 +300,108 @@ thirdContentHover();
 
 
 
+// fourth-content slider animation
+
+//card opacity animation used as a callback in fourthContentSlider function
+let cardOpacity = (count, dotElements, sliderCardElements) => {
+    //opacity effect
+    let leftElementCount = (count - 1) > -1 ? (count - 1) : (dotElements.length -1) ;
+    let rightElementCount = (count + 1) < dotElements.length ? (count + 1) : 0 ; 
+   
+    //device width
+    let screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+    //check screen size to decide to how many items to give full opacity
+    if(screenWidth > 768 ){//3 items full opacity
+        //reduce old items opacity
+        for(let i = 0 ; i < dotElements.length ; i++){
+            if(i != leftElementCount && i != rightElementCount && i != count){
+                sliderCardElements[i].style.opacity = "0.3";
+            }
+        }
+        sliderCardElements[leftElementCount].style.opacity = "1";
+        sliderCardElements[rightElementCount].style.opacity = "1";
+        sliderCardElements[count].style.opacity = "1";
+    }else{//only the center/1 item full opacity
+
+    }
+
+}
+
+//main function call for the slider 
+let fourthContentSlider = () => {
+    let leftArrow = document.querySelector('#fourth-content #card-display .left-arrow');
+    let rightArrow = document.querySelector('#fourth-content #card-display .right-arrow');
+    let sliderDiv = document.querySelector('#fourth-content #card-display');
+    let dotElements = document.querySelectorAll('#fourth-content .dot-container .dot');
+    let sliderCardElements = document.querySelectorAll('#fourth-content #card-display .slider-card');
+
+    let slideAmount = "27.5";
+    let count = 0;
+
+    
+    //initialize the slider css
+    dotElements[count].style.backgroundColor = "#15234C";
+
+
+    //initialize card opacities on page load
+    cardOpacity(count, dotElements, sliderCardElements);
+
+
+    //slide the cards to left
+    leftArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+
+
+        //change old dots color
+        dotElements[count].style.backgroundColor = "#B1B6C3";
+        
+        count--;
+
+        //make it wrap when reaches the first
+        if(count < 0){
+            count = dotElements.length - 1;
+        }
+
+        //change color of the dots
+        dotElements[count].style.backgroundColor = "#15234C";
+
+        //card opacity change on sliding
+        cardOpacity(count, dotElements, sliderCardElements);
+
+        
 //
+        sliderDiv.style.marginLeft = `${(slideAmount * count)}vw`
+    });
+
+    
+    //slide the cards to right
+    rightArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+console.log("e")
+
+         //change old dots color
+         dotElements[count].style.backgroundColor = "#B1B6C3";
+
+         count++;
+ 
+         //make it wrap when reaches the end
+         if(count > dotElements.length -1){
+             count = 0;
+         }
+ 
+        //change color of the dots
+        dotElements[count].style.backgroundColor = "#15234C";
+
+        //card opacity change on sliding
+        cardOpacity(count, dotElements, sliderCardElements);
+
+        console.log(count)
+//
+        sliderDiv.style.marginLeft = `${(slideAmount * count)}vw`
+
+    });
+
+}   
+
+fourthContentSlider();
